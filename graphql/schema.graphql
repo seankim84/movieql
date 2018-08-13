@@ -1,9 +1,13 @@
-type Sean {
+# 여기선 Query의 type 을 정의한다.
+
+type Person {
+    id: Int!
     name: String!
     age: Int!
     gender: String!
 }
 
 type Query {
-    person: Sean!  # query에 이름을 보내면 String을 보낸다.
+    people: [Person]!
+    person(id: Int!):Person
 }
