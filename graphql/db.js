@@ -27,7 +27,7 @@ export const getById = id => {
     return filteredMovies[0];
 };
 
-export const deleteMovie = id => { //id를 가지지 않은 무비 배열
+export const deleteMovie = id => {
     const cleanedMovies = movies.filter(movie => movie.id !== String(id));
     if (movies.length > cleanedMovies.length) {
         movies = cleanedMovies;
