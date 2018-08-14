@@ -1,18 +1,12 @@
-# 여기선 Query의 type 을 정의한다.
-
 type Movie {
-    id: Int!
-    name: String!
-    score: Int!
+  id: Int!
+  title: String!
+  rating: Float!
+  summary: String!
+  language: String!
+  medium_cover_image: String!
 }
 
 type Query {
-    movies: [Movie]!
-    movie(id: Int!): Movie
+  movies: [Movie]!
 }
-
-type Mutation {
-  addMovie(name: String!, score: Int!): Movie!
-  deleteMovie(id: Int!): Boolean!
-}
-# Mutation = DB chages of the State
